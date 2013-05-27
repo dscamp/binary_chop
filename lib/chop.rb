@@ -1,14 +1,8 @@
 #! /usr/bin/env ruby
 # binary chop kata from Dave Thomas codekata.prapprog.com
-require 'test/unit'
-
 
 
 def chop (num, nums, pos=0)
-  puts "num is #{num}"
-  puts "nums are #{nums}"
-  puts "position is #{pos}"
-
   #simple cases
   return -1 if nums.length == 0
   return -1 if num < nums[0]
@@ -19,26 +13,19 @@ def chop (num, nums, pos=0)
 
   #the real fun
   mid = nums.length / 2
-  puts "mid is #{mid}"
-
   first = nums.slice( 0, mid)
   last = nums.slice( mid, nums.length)
   return chop(num, last, mid + pos)  if num > first[-1]
   return chop(num, first, pos) 
-
 end
 
 
 if __FILE__ == $0
   puts "Hello"
   num = ARGV[0].to_i
-  
   nums = ARGV[1].scan(/\d/).map(&:to_i)
-  puts "number is #{num}"
-  puts "numbers are #{nums}"
 
   puts chop(num, nums)
-
 end
 
 
