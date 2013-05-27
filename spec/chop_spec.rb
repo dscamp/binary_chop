@@ -55,6 +55,9 @@ describe "binary chop" do
       chop(3, @nums).should be(1)
     end
 
+    it "should return 4 when last item in array" do
+      chop(9, @nums).should be(4)
+    end
   end
 
 end
