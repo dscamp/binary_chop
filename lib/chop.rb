@@ -2,12 +2,12 @@
 # binary chop kata from Dave Thomas codekata.prapprog.com
 
 def chop(num, nums, pos=0)
+  return -1 if nums.length == 0
   re_chop(num, nums, pos)
 end
 
 def re_chop (num, nums, pos=0)
-  #simple cases
-  return -1 if nums.length == 0
+
   return -1 if num < nums[0]
   return -1 if num > nums[-1]
 
