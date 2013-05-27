@@ -8,8 +8,8 @@ end
 
 def re_chop (num, nums, pos)
 
-  return -1 if num < nums[0]
-  return -1 if num > nums[-1]
+  return -1 if num < nums[0] || num > nums[-1]
+
 
   #only one element
   return pos if nums.length == 1
@@ -19,6 +19,7 @@ def re_chop (num, nums, pos)
 
   last = nums.slice( mid, nums.length)
   return re_chop(num, last, mid + pos)  if num >= last[0]
+
   first = nums.slice( 0, mid)
   return re_chop(num, first, pos) 
 end
