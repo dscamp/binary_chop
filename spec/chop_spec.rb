@@ -23,10 +23,11 @@ describe "binary chop" do
       @nums = [1,3,5]
     end
 
-    it "should return 0 when item in array" do
+    it "should return 0 when first item in array" do
       chop(1,@nums).should eq(0)
     end
     
+
   end
   
   
