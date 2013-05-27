@@ -51,6 +51,10 @@ describe "binary chop" do
       chop(100, @nums).should be(-1)
     end
 
+    it "should return 1 when num is second item in array" do
+      chop(3, @nums).should be(1)
+    end
+
   end
 
 end
