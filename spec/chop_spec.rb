@@ -18,16 +18,16 @@ describe "binary chop" do
     end
   end
 
-#  context "slightly larger array" do
-#    before(:each) do
-#      nums = [1,3,5]
-#    end
+  context "slightly larger array" do
+    before(:each) do
+      @nums = [1,3,5]
+    end
 
-#    it "should return 0 when item in array" do
-#      chop(1,nums)
-#    end
+    it "should return 0 when item in array" do
+      chop(1,@nums).should eq(0)
+    end
     
-#  end
+  end
   
   
 
