@@ -27,7 +27,3 @@ if __FILE__ == $0
 
   puts chop(num, nums)
 end
-
-
-
-

@@ -58,6 +58,10 @@ describe "binary chop" do
     it "should return 4 when last item in array" do
       chop(9, @nums).should be(4)
     end
+
+    it "should return -1 if the item is not in array" do
+      chop(4, @nums).should be(-1)
+    end
   end
 
 end
