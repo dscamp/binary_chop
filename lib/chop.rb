@@ -7,9 +7,7 @@ def chop(num, nums, pos=0)
 end
 
 def re_chop (num, nums, pos)
-
   return -1 if num < nums[0] || num > nums[-1]
-
 
   #only one element
   return pos if nums.length == 1
