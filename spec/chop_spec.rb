@@ -14,7 +14,7 @@ describe "binary chop" do
     end
 
     it "returns 0 when only number in array" do
-      chop(3,[3])
+      chop(3,[3]).should eq(0)
     end
   end
 

@@ -4,8 +4,8 @@ require 'test/unit'
 
 
 def chop (num, nums)
-  -1
-
+  return 0  if nums[0] == num
+  return -1
 end
 
 
