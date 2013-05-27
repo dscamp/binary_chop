@@ -1,8 +1,11 @@
 #! /usr/bin/env ruby
 # binary chop kata from Dave Thomas codekata.prapprog.com
 
+def chop(num, nums, pos=0)
+  re_chop(num, nums, pos)
+end
 
-def chop (num, nums, pos=0)
+def re_chop (num, nums, pos=0)
   #simple cases
   return -1 if nums.length == 0
   return -1 if num < nums[0]
@@ -15,13 +18,12 @@ def chop (num, nums, pos=0)
   mid = nums.length / 2
   first = nums.slice( 0, mid)
   last = nums.slice( mid, nums.length)
-  return chop(num, last, mid + pos)  if num > first[-1]
-  return chop(num, first, pos) 
+  return re_chop(num, last, mid + pos)  if num > first[-1]
+  return re_chop(num, first, pos) 
 end
 
 
 if __FILE__ == $0
-  puts "Hello"
   num = ARGV[0].to_i
   nums = ARGV[1].scan(/\d/).map(&:to_i)
 
