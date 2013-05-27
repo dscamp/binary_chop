@@ -24,12 +24,17 @@ describe "binary chop" do
     end
 
     it "should return 0 when num is first item in array" do
-      chop(1,@nums).should eq(0)
+      chop(1, @nums).should eq(0)
     end
     
     it "should return 1 when num is  second item in array" do
-      chop(3,@nums).should eq(1)
+      chop(3, @nums).should eq(1)
     end
+
+    it "should return -1 when num is greater that largest item in array" do
+      chop(7, @nums).should eq(-1)
+    end
+
   end
   
   
