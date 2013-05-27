@@ -18,16 +18,18 @@ describe "binary chop" do
     end
   end
 
-  context "slightly larger array" do
+  context "when using multi number array" do
     before(:each) do
       @nums = [1,3,5]
     end
 
-    it "should return 0 when first item in array" do
+    it "should return 0 when num is first item in array" do
       chop(1,@nums).should eq(0)
     end
     
-
+    it "should return 1 when num is  second item in array" do
+      chop(3,@nums).should eq(1)
+    end
   end
   
   

@@ -4,7 +4,7 @@ require 'test/unit'
 
 
 def chop (num, nums)
-  return 0  if nums[0] == num
+  nums.each_index { |i| return i if num == nums[i] }
   return -1
 end
 
